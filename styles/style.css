@@ -124,6 +124,9 @@ margin-top: 10%;
     border: 1px solid hsl(231, 11%, 63%);
     border-radius: 5px;
 }
+.personal-form input:hover{
+  border: 1px solid hsl(243, 100%, 62%);
+}
 .form-wrapper {
   display: inline-block; 
   width:100%;
@@ -144,6 +147,9 @@ margin-top: 10%;
     background: hsl(213, 96%, 18%);
     color: white;
     font-size: 16px;
+}
+.btn-next-step:hover{
+filter: brightness(1.5);
 }
 .current-step-selected{
     background: hsl(206, 94%, 87%);
@@ -166,6 +172,10 @@ margin-top: 10%;
     height:22vh;
     border-radius: 10px;
     border: 1px solid hsl(229, 24%, 87%);
+
+}
+.plan-holder:hover{
+  border: 1px solid hsl(243, 100%, 62%);
 
 }
 .plan-holder-selected{
@@ -253,6 +263,9 @@ margin:1.5vh 1.5vh;
     color: hsl(231, 11%, 63%);
     font-size: 14px;
 }
+.btn-go-back:hover{
+   filter: saturate(1.5) contrast(1.2);
+}
 .container-mn-year p.mn-yearly-chosen {
   color: hsl(213, 96%, 18%); 
 }
@@ -286,6 +299,10 @@ margin:1.5vh 1.5vh;
   padding-left: 2vh;
   
 }
+.add-ons-holder:hover{
+  border: 1px solid hsl(243, 100%, 62%);
+  
+}
 .checkbox-begining{
   width:20px;
   height:20px;
@@ -311,13 +328,16 @@ margin:1.5vh 1.5vh;
   display: flex;
   justify-content: space-between;
   margin-bottom:3vh ;
+  margin-right: 3vh;
   align-items: center;
   
 }
 .general-summary-add-ons{
   margin-bottom: 2vh;
+  margin-right: 3vh;
   
 }
+
 .summary-add-ons, .total-holder{
   display: flex;
   justify-content: space-between;
@@ -335,6 +355,8 @@ margin:1.5vh 1.5vh;
   color:hsl(243, 100%, 62%);
   font-weight: var(--fw-bold);
   font-size: 24px;
+  margin-right: 3vh;
+
 }
 .general-summary-holder{
   margin-top: 4vh;
@@ -357,6 +379,9 @@ margin:1.5vh 1.5vh;
     color: white;
     border: none;
 }
+.btn-confirm:hover{
+ filter: brightness(1.7);
+}
 /*thank you display*/
 .thanks-holder{
   margin-top: 13vh;
@@ -378,4 +403,98 @@ margin:1.5vh 1.5vh;
   max-width: 500px;
   
   
+}
+/*adaptive*/
+@media screen and (max-width: 768px) {
+  .general-personal-info {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    margin: 0;
+    box-shadow: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    background-image: url("/assets/images/bg-sidebar-mobile.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    padding: 2rem 0;
+    border-radius: 0;
+  }
+
+  .steps {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0;
+    margin-top: 0;
+  }
+
+  .step-container {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  .step-text {
+    display: none; 
+  }
+
+  .form-container {
+    padding: 2rem;
+    width: 100%;
+  }
+
+  .btn-next-step {
+    position: static;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .btn-go-back {
+    position: static;
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .general-plan-holder,
+  .general-add-ons-holder {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .plan-holder,
+  .add-ons-holder {
+    width: 100%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .summary-plan,
+  .summary-add-ons,
+  .total-holder {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .btn-confirm {
+    position: static;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .thanks-text {
+    padding: 0 1rem;
+    font-size: 14px;
+  }
 }

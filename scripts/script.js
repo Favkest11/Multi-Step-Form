@@ -432,7 +432,7 @@ const total = planCost + addOnsTotal;
       <div class="general-summary-holder">
       <div class="summary-plan">
         <h3>${plan} (${globalBillingYearly ? "Yearly" : "Monthly"})</h3>
-        <p class="">${planPrice}</p>
+        <p class="plan-price">${planPrice}</p>
       </div> 
       <div class="general-summary-add-ons">
        ${summaryHTML || "<p>No add-ons selected</p>"}
